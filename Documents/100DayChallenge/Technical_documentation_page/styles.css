@@ -1,0 +1,46 @@
+body{
+    font-size: 15px;
+}
+  
+  .nav-link{
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #ab3838;
+    float: center;
+    }
+  aside {
+    height: 100%;
+   
+    float: left;  
+    background-attachment: scroll;
+  }
+  .nav-link:last-child{
+    border-bottom: none;
+  }
+  header{
+    font-weight: bold;
+    font-size: 25px;
+  } 
+  code{
+    background-color: #f3eeeee4;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+  }
+  #navbar li {
+    color: #808189;
+    border-bottom: 1px solid #ab3838;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+@media only screen and (max-width: 200px) {
+    body {
+      background-color: lightblue;
+      color: 
+    }
+  }
