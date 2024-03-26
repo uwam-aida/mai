@@ -6,7 +6,7 @@ import StudentModel from './models/student.model.js';
 import FacilitatorModel from '../models/facilitator.modules.js';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;// running on port 3000
 const db_connection_string = process.env.MONGODB_URI;
 
 app.use(express.json());
