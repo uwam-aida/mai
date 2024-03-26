@@ -1,0 +1,132 @@
+/*CSS to style the body of the whole page*/
+body{
+      background-color: aqua;  
+      background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+      ),
+      url(./images/survey-form-background.jpeg);
+        
+      font-family: 'Poppins', serif;
+      display: grid;  
+      justify-content: center; 
+      font-weight: 400px;
+      line-height: 1.5;
+      font-size:12px;
+      min-width: 10px;
+      background-image: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment:fixed;
+
+      
+      
+     }
+     /* css to style the title */
+    #title{
+     display: flex;
+     justify-content: center; 
+     margin-top: 50px;
+     font-weight: none;
+     color: white;
+     font-family: 'Poppins', sans-serif;
+     font-size: 2rem;
+     line-height: 0.5;
+   }
+    
+    /*CSS to stype the heading with an Id of description*/
+    #description{
+    
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px; 
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      margin-left: 100px;
+      font-weight: normal;
+
+     
+    }
+    /*CSS to style the survey form*/
+    #survey-form{
+      font-family: 'verdana', sans-serif;
+      background-color: rgb(25, 25, 53);
+      border-radius: 4px;
+      padding: 40px; 
+      display: grid;  
+      color:aliceblue;
+      min-width: 1px;
+      font-size: 1rem;
+      padding: 20px;
+       opacity: 0.8;
+      width: 100%;
+      }
+    /*CSS to style the input*/  
+    input{
+     border: 1px ; 
+      border-radius:4px;
+      padding-top: 10px;
+      padding-left: 10px; 
+      padding-bottom:10px;
+      font-size:17px;
+      width:100%;
+      
+    }
+    /*CSS to style select tag,textarea and button*/
+      select,textarea,button{
+        width: 100%;
+        border-style: none;
+      }
+    
+    select{
+        padding: 5px 10px;
+        height: 40px; 
+        width:100%;
+        border-radius:4px;
+    }
+   
+    
+   
+    /*CSS to style the textarea*/
+    #input-textarea {
+        min-height: 120px;
+        width:99%;
+        resize: verticle;
+        font-family: 'poppins', sans-serif;
+        font-size: 100%;
+        padding: 10px 0px 20px 0px;
+    }
+    /*CSS to style the submit-button*/
+    #submit-button{
+        padding-top: 10px;
+        padding-bottom:10px;
+        background-color:rgb(31, 220, 128);
+        font-size:20px;
+        width:100%;
+        color:aliceblue;
+        cursor: pointer;
+    }
+
+  /*CSS to style the input of type radio and checkbox*/
+      input[type="checkbox"]{
+       
+      height: 20px;
+      width: 20px;
+      vertical-align: middle;
+     }
+     input[type="radio"]{ 
+      height: 20px;
+      width: 20px;
+      vertical-align: middle;
+
+     }
+     
+     
+/*media queries to help in making responsive websites*/
+     @media (max-width: 700px) {
+      form {
+        max-width: 80%;
+            }
+                               }

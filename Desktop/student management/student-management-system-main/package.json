@@ -1,0 +1,22 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "This is a student management system that helps facilitators to register, and manage attendance for students in SheCanCODE",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
