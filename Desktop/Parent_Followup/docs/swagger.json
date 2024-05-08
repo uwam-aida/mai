@@ -1,0 +1,331 @@
+{
+  "swagger": "2.0",
+  "info": {
+      "title": "event_management-booking",
+      "description": "An API for event management",
+      "version": "8.0.0"
+  },
+  "host": "localhost:8081",
+  "schemes": ["http", "https"],
+  "basePath": "",
+  "paths": {
+      "/event_management_app/event": {
+          "post": {
+              "summary": "Create a event",
+              "description": "Create a new event",
+              "tags": ["events"],
+              "parameters": [
+                  {
+                      "in": "body",
+                      "name": "body",
+                      "schema": {
+                          "$ref": "#/definitions/event"
+                      },
+                      "required": true,
+                      "description": "event object"
+                  }
+              ],
+              "responses": {
+                  "201": {
+                      "description": "event created"
+                  }
+              }
+          }
+      },
+      "/event_management_app/events": {
+          "get": {
+              "summary": "List all events",
+              "description": "Retrieve a list of all events stored in the database",
+              "tags": ["upcoming events"],
+              "responses": {
+                  "200": {
+                      "description": "Successfully retrieved list of events",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "type": "array",
+                                  "items": {
+                                      "$ref": "#/definitions/event"
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "404": {
+                      "description": "No event found"
+                  },
+                  "500": {
+                      "description": "Internal server error"
+                  }
+              }
+          }
+      },
+      "/event_management_app/events/{id}": {
+          "delete": {
+              "summary": "Delete a event by ID",
+              "description": "Delete a event by ID",
+              "tags": ["events"],
+              "parameters": [
+                  {
+                      "name": "id",
+                      "in": "path",
+                      "description": "ID of the event to delete",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "204": {
+                      "description": "event deleted"
+                  },
+                  "404": {
+                      "description": "event not found"
+                  }
+              }
+          },
+          "get": {
+              "summary": "Get a event by ID",
+              "description": "Get a event by ID",
+              "tags": ["events"],
+              "parameters": [
+                  {
+                      "name": "id",
+                      "in": "path",
+                      "description": "ID of the event to retrieve",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Successful response",
+                      "schema": {
+                          "$ref": "#/definitions/event"
+                      }
+                  },
+                  "404": {
+                      "description": "event not found"
+                  }
+              }}
+          },
+          "/event_management_app/eventupdate/{id}": {
+          "patch": {
+              "summary": "Update a event by ID",
+              "description": "Update the information of event by ID",
+              "tags": ["events"],
+              "parameters": [
+                  {
+                      "name": "id",
+                      "in": "path",
+                      "description": "ID of the event to update",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "in": "body",
+                      "name": "body",
+                      "description": "Updated event information",
+                      "required": true,
+                      "schema": {
+                          "$ref": "#/definitions/event"
+                      }
+                  }
+              ],
+              "responses": {
+                  "204": {
+                      "description": "event updated successfully"
+                  },
+                  "404": {
+                      "description": "event not found"
+                  }
+              }
+          }
+      }
+  },
+
+
+ "host": "localhost:8081",
+  "schemes": ["http", "https"],
+  "basePath": "",
+  "paths": {
+      "/event_management_app/event": {
+          "post": {
+              "summary": "Create a event",
+              "description": "Create a new event",
+              "tags": ["events"],
+              "parameters": [
+                  {
+                      "in": "body",
+                      "name": "body",
+                      "schema": {
+                          "$ref": "#/definitions/event"
+                      },
+                      "required": true,
+                      "description": "event object"
+                  }
+              ],
+              "responses": {
+                  "201": {
+                      "description": "event created"
+                  }
+              }
+          }
+      },
+      "/event_management_app/events": {
+          "get": {
+              "summary": "List all events",
+              "description": "Retrieve a list of all events stored in the database",
+              "tags": ["upcoming events"],
+              "responses": {
+                  "200": {
+                      "description": "Successfully retrieved list of events",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "type": "array",
+                                  "items": {
+                                      "$ref": "#/definitions/event"
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "404": {
+                      "description": "No event found"
+                  },
+                  "500": {
+                      "description": "Internal server error"
+                  }
+              }
+          }
+      },
+      "/event_management_app/events/{id}": {
+          "delete": {
+              "summary": "Delete a event by ID",
+              "description": "Delete a event by ID",
+              "tags": ["events"],
+              "parameters": [
+                  {
+                      "name": "id",
+                      "in": "path",
+                      "description": "ID of the event to delete",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "204": {
+                      "description": "event deleted"
+                  },
+                  "404": {
+                      "description": "event not found"
+                  }
+              }
+          },
+          "get": {
+              "summary": "Get a event by ID",
+              "description": "Get a event by ID",
+              "tags": ["events"],
+              "parameters": [
+                  {
+                      "name": "id",
+                      "in": "path",
+                      "description": "ID of the event to retrieve",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Successful response",
+                      "schema": {
+                          "$ref": "#/definitions/event"
+                      }
+                  },
+                  "404": {
+                      "description": "event not found"
+                  }
+              }}
+          },
+          "/event_management_app/eventupdate/{id}": {
+          "patch": {
+              "summary": "Update a event by ID",
+              "description": "Update the information of event by ID",
+              "tags": ["events"],
+              "parameters": [
+                  {
+                      "name": "id",
+                      "in": "path",
+                      "description": "ID of the event to update",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      }
+                  },
+                  {
+                      "in": "body",
+                      "name": "body",
+                      "description": "Updated event information",
+                      "required": true,
+                      "schema": {
+                          "$ref": "#/definitions/event"
+                      }
+                  }
+              ],
+              "responses": {
+                  "204": {
+                      "description": "event updated successfully"
+                  },
+                  "404": {
+                      "description": "event not found"
+                  }
+              }
+          }
+      }
+  },
+
+
+
+
+
+
+
+
+
+
+
+  
+  "definitions": {
+      "event": {
+          "type": "object",
+          "properties": {
+              "organiser": {
+                  "type": "string"
+              },
+              "name": {
+                  "type": "string"
+              },
+              "location": {
+                  "type": "string"
+              },
+              "date": {
+                  "type": "string"
+              },
+              "description": {
+                  "type": "string"
+              }
+          },
+          "required": ["organiser", "name", "location", "date", "description"]
+      }
+  }
+}
